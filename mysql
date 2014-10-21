@@ -22,6 +22,6 @@
 
 
 // Написать запрос для добавления нового пользователя/альбома/фотографии.
-
 INSERT INTO users(name) value('Иванов Иван')
-
+INSERT INTO albums (name, id_owner) VALUES ('Работа',3);
+INSERT INTO photos(name, id_owner) VALUES ('ng_1.jpg',1)
