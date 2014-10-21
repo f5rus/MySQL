@@ -79,4 +79,15 @@ SELECT id_photo
 FROM photosinalbum
 )
 
-10.Написать запрос, выводящий 2 колонки: 1 — фотография, 2 — пользователь, который может смотреть фотографию.
+//10.Написать запрос, выводящий 2 колонки: 1 — фотография, 2 — пользователь, который может смотреть фотографию.
+SELECT photos.name, users.name
+FROM photos
+INNER JOIN users ON photos.id_owner = users.id
+WHERE photos.privat =1
+UNION
+SELECT photos.name, users.name
+FROM photos
+INNER JOIN users
+WHERE photos.privat =0
+LIMIT 0 , 30
+
