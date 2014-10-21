@@ -62,3 +62,4 @@ IN (
 //7. Написать запрос для изменения имени пользователя/названия альбома/перевод фотографии в приватный режим.
 UPDATE users SET name = 'Игорь Игоревич' WHERE id =2;
 UPDATE albums SET name = 'Веселимся' WHERE id =1;
+UPDATE photos SET privat =1 WHERE id =1;
