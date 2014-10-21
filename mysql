@@ -89,5 +89,5 @@ SELECT photos.name, users.name
 FROM photos
 INNER JOIN users
 WHERE photos.privat =0
-LIMIT 0 , 30
+
 
