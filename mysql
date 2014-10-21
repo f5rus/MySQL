@@ -74,7 +74,7 @@ DELETE FROM userphotos WHERE id_photo IN (
 AND id_user <>1
 
 //9 Написать скрипт удаляющий все фотографии без альбома.
-DELETE FROM photos WHERE id NOT IN( 
-   SELECT id_photo
-   FROM photosinalbum
-WHERE id_album <> NULL)
+DELETE FROM photos WHERE id NOT IN (
+SELECT id_photo
+FROM photosinalbum
+)
