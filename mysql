@@ -72,3 +72,9 @@ DELETE FROM userphotos WHERE id_photo IN (
    AND photos.privat =1
 )
 AND id_user <>1
+
+//9
+DELETE FROM photos WHERE id NOT IN( 
+   SELECT id_photo
+   FROM photosinalbum
+WHERE id_album <> NULL)
