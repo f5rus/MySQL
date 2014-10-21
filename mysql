@@ -66,14 +66,9 @@ UPDATE photos SET privat =1 WHERE id =1;
 
 //8. Написать запрос который удалит все ваши приватные фотографии из чужих альбомов.
 DELETE FROM userphotos WHERE id_photo IN (
-   SELECT id_photo
-   FROM (
-
-      SELECT id_photo
-      FROM userphotos
-      INNER JOIN photos ON userphotos.id_photo = photos.id
-      WHERE userphotos.id_user =1
-      AND photos.privat =1
-      ) AS photos
+   SELECT id
+   FROM photos
+   WHERE id_owner =1
+   AND photos.privat =1
 )
 AND id_user <>1
