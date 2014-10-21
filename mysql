@@ -22,9 +22,9 @@
 
 
 //3. Написать запрос для добавления нового пользователя/альбома/фотографии.
-INSERT INTO users(name) value('Иванов Иван')
+INSERT INTO users(name) value('Иванов Иван');
 INSERT INTO albums (name, id_owner) VALUES ('Работа',3);
-INSERT INTO photos(name, id_owner) VALUES ('ng_1.jpg',1)
+INSERT INTO photos(name, id_owner) VALUES ('ng_1.jpg',1);
 
 //4. Написать 2 скрипта: первый присылает запрос на добавления в друзья, второй подтверждает инвайт.
 Scr_request.sql
@@ -60,4 +60,5 @@ IN (
 )
 
 //7. Написать запрос для изменения имени пользователя/названия альбома/перевод фотографии в приватный режим.
-UPDATE users SET name = 'Игорь Игоревич' WHERE id =2
+UPDATE users SET name = 'Игорь Игоревич' WHERE id =2;
+UPDATE albums SET name = 'Веселимся' WHERE id =1;
